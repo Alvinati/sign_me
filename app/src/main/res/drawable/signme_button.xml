@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_enabled="true">
+        <shape android:shape="rectangle"
+            android:innerRadius="@dimen/cardview_default_elevation"
+            >
+            <corners android:radius="20dp"
+                />
+            <gradient
+                android:startColor="@color/blue_700"
+                android:endColor="@color/purple_700"
+                android:angle="360"
+                />
+        </shape>
+    </item>
+
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle"
+            android:innerRadius="@dimen/cardview_default_elevation"
+            >
+            <corners android:radius="20dp"
+                />
+            <solid android:color="@color/blue_700"/>
+        </shape>
+    </item>
+
+    <item android:state_enabled="false">
+        <shape android:shape="rectangle">
+            <corners android:radius="20dp"/>
+            <solid android:color="@color/material_on_primary_disabled"/>
+        </shape>
+    </item>
+</selector>

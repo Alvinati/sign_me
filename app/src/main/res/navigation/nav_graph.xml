@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/LoginFragment">
+
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="com.porto.signme.LoginFragment"
+        android:label="Fragment Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_LoginFragment_to_FragmentRegister"
+            app:popUpTo="@id/LoginFragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/RegisterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/RegisterFragment"
+        android:name="com.porto.signme.RegisterFragment"
+        android:label="Fragment Register"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_FragmentRegister_to_LoginFragment"
+            app:popUpTo="@id/RegisterFragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/LoginFragment" />
+    </fragment>
+</navigation>
